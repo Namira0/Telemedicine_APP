@@ -2,13 +2,20 @@ package com.example.telemedicine_app.Namira;
 
 import com.example.telemedicine_app.common.User;
 
+import java.time.LocalDate;
+
 public class Physiotherapist extends User {
     private String LicenseNo,Specialization,Qualification,ClinicName,Bio,availability,LanguageSpoken;
     private int YearsOfExperience;
     private float ConsultationFee;
     private boolean verified;
 
-    public Physiotherapist(String licenseNo, String specialization, String qualification, String clinicName, String bio, String availability, String languageSpoken, int yearsOfExperience, float consultationFee, boolean verified) {
+    public Physiotherapist(String userId, String name, String email, String address,
+                           String password, String gender, int phoneNumber, LocalDate dateOfBirth,
+                           String licenseNo, String specialization, String qualification, String clinicName,
+                           String bio, String availability, String languageSpoken, int yearsOfExperience,
+                           float consultationFee, boolean verified) {
+        super(userId, name, email, address, password, gender, phoneNumber, dateOfBirth, LocalDate.now(), true);
         LicenseNo = licenseNo;
         Specialization = specialization;
         Qualification = qualification;
@@ -106,5 +113,13 @@ public class Physiotherapist extends User {
                 ", ConsultationFee=" + ConsultationFee +
                 ", verified=" + verified +
                 '}';
+    }
+    @Override
+    public void showDashboard() {
+        System.out.println("=== Physiotherapist dashboard ===");
+        System.out.println("Name: " + getName());
+        System.out.println("Specialization: " + Specialization);
+        System.out.println("Clinic: " + ClinicName);
+        System.out.println("Verified: " + verified);
     }
 }

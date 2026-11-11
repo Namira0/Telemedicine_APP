@@ -10,7 +10,9 @@ public abstract class User {
     private LocalDate dateOfBirth, registrationDate;
     private boolean active;
 
-    public User(String userId, String name, String email, String address, String password, String gender, int phoneNumber, LocalDate dateOfBirth, LocalDate registrationDate, boolean active) {
+    public User(String userId, String name, String email, String address, String password,
+                String gender, int phoneNumber, LocalDate dateOfBirth,
+                LocalDate registrationDate, boolean active) {
         this.userId = userId;
         this.name = name;
         this.email = email;
