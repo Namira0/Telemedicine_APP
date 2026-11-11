@@ -1,6 +1,6 @@
 package com.example.telemedicine_app.Namira;
 
-public class Physiotherapist {
+public class Physiotherapist extends User{
     private String LicenseNo,Specialization,Qualification,ClinicName,Bio,availability,LanguageSpoken;
     private int YearsOfExperience;
     private float ConsultationFee;
