@@ -1,57 +1,108 @@
 package com.example.telemedicine_app.Namira;
 
 public class Physiotherapist {
-    private String physiotherapistId;
-    private String name;
-    private String specialization;
-    private String contactNumber;
-    private String email;
+    private String LicenseNo,Specialization,Qualification,ClinicName,Bio,availability,LanguageSpoken;
+    private int YearsOfExperience;
+    private float ConsultationFee;
+    private boolean verified;
 
-    public String getPhysiotherapistId() {
-        return physiotherapistId;
+    public Physiotherapist(String licenseNo, String specialization, String qualification, String clinicName, String bio, String availability, String languageSpoken, int yearsOfExperience, float consultationFee, boolean verified) {
+        LicenseNo = licenseNo;
+        Specialization = specialization;
+        Qualification = qualification;
+        ClinicName = clinicName;
+        Bio = bio;
+        this.availability = availability;
+        LanguageSpoken = languageSpoken;
+        YearsOfExperience = yearsOfExperience;
+        ConsultationFee = consultationFee;
+        this.verified = verified;
     }
 
-    public void setPhysiotherapistId(String physiotherapistId) {
-        this.physiotherapistId = physiotherapistId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public String getLicenseNo() {
+        return LicenseNo;
     }
 
     public String getSpecialization() {
-        return specialization;
+        return Specialization;
     }
 
+    public String getQualification() {
+        return Qualification;
+    }
+
+    public String getClinicName() {
+        return ClinicName;
+    }
+
+    public String getBio() {
+        return Bio;
+    }
+
+    public String getAvailability() {
+        return availability;
+    }
+
+    public String getLanguageSpoken() {
+        return LanguageSpoken;
+    }
+
+    public int getYearsOfExperience() {
+        return YearsOfExperience;
+    }
+
+    public float getConsultationFee() {
+        return ConsultationFee;
+    }
+
+    public boolean isVerified() {
+        return verified;
+    }
     public void setSpecialization(String specialization) {
-        this.specialization = specialization;
+        Specialization = specialization;
     }
 
-    public String getContactNumber() {
-        return contactNumber;
+    public void setQualification(String qualification) {
+        Qualification = qualification;
     }
 
-    public void setContactNumber(String contactNumber) {
-        this.contactNumber = contactNumber;
+    public void setClinicName(String clinicName) {
+        ClinicName = clinicName;
     }
 
-    public String getEmail() {
-        return email;
+    public void setBio(String bio) {
+        Bio = bio;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setAvailability(String availability) {
+        this.availability = availability;
     }
 
-    public Physiotherapist(String physiotherapistId, String name, String specialization, String contactnumber, String email) {
-        this.physiotherapistId = physiotherapistId;
-        this.name = name;
-        this.specialization = specialization;
-        this.contactNumber = contactnumber;
-        this.email = email;
+    public void setLanguageSpoken(String languageSpoken) {
+        LanguageSpoken = languageSpoken;
+    }
+
+    public void setYearsOfExperience(int yearsOfExperience) {
+        YearsOfExperience = yearsOfExperience;
+    }
+
+    public void setConsultationFee(float consultationFee) {
+        ConsultationFee = consultationFee;
+    }
+
+    @Override
+    public String toString() {
+        return "Physiotherapist{" +
+                "LicenseNo='" + LicenseNo + '\'' +
+                ", Specialization='" + Specialization + '\'' +
+                ", Qualification='" + Qualification + '\'' +
+                ", ClinicName='" + ClinicName + '\'' +
+                ", Bio='" + Bio + '\'' +
+                ", availability='" + availability + '\'' +
+                ", LanguageSpoken='" + LanguageSpoken + '\'' +
+                ", YearsOfExperience=" + YearsOfExperience +
+                ", ConsultationFee=" + ConsultationFee +
+                ", verified=" + verified +
+                '}';
     }
 }
