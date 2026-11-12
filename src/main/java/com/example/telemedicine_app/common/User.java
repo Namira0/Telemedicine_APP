@@ -5,12 +5,13 @@ import java.time.Period;
 import java.util.Objects;
 
 public abstract class User {
-    private String userId,name,email,address,password,gender;
-    private int phoneNumber;
+    private String userId,name,email,address,password,gender,phoneNumber;
     private LocalDate dateOfBirth, registrationDate;
     private boolean active;
 
-    public User(String userId, String name, String email, String address, String password, String gender, int phoneNumber, LocalDate dateOfBirth, LocalDate registrationDate, boolean active) {
+    public User(String userId, String name, String email, String address, String password,
+                String gender, String phoneNumber, LocalDate dateOfBirth,
+                LocalDate registrationDate, boolean active) {
         this.userId = userId;
         this.name = name;
         this.email = email;
@@ -39,15 +40,11 @@ public abstract class User {
         return address;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
     public String getGender() {
         return gender;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
@@ -63,24 +60,50 @@ public abstract class User {
         return active;
     }
     public void setEmail(String email) {
-        this.email = email;
+        this.email = validEmail(email);
     }
     public void setAddress(String address) {
-        this.address = address;
+        this.address = requireText(address, "Address");
     }
     public void setPassword(String password) {
+        if (password == null || password.length() < 8
+                || !password.matches(".*[A-Za-z].*")
+                || !password.matches(".*\\d.*")) {
+            throw new IllegalArgumentException("Password needs 8+ characters with a letter and a number");
+        }
         this.password = password;
     }
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = validPhone(phoneNumber);
     }
+    private static String requireText(String value, String fieldName) {
+        if (value == null || value.isBlank()) {
+            throw new IllegalArgumentException(fieldName + " cannot be empty");
+        }
+        return value.trim();
+    }
+
+    private static String validEmail(String email) {
+        if (email == null || !email.matches("^[\\w.+-]+@[\\w-]+\\.[\\w.]+$")) {
+            throw new IllegalArgumentException("Invalid email format");
+        }
+        return email.trim();
+    }
+
+    private static String validPhone(String phone) {
+        if (phone == null || !phone.matches("01\\d{9}")) {
+            throw new IllegalArgumentException("Phone must be 11 digits starting with 01");
+        }
+        return phone;
+    }
+    @Override
     public String toString() {
         return "User{" +
                 "userId='" + userId + '\'' +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
-                ", password='" + password + '\'' +
+                // ", password='" + password + '\'' +
                 ", gender='" + gender + '\'' +
                 ", phoneNumber=" + phoneNumber +
                 ", dateOfBirth=" + dateOfBirth +
