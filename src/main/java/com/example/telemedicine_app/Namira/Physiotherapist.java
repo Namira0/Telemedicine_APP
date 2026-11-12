@@ -11,20 +11,23 @@ public class Physiotherapist extends User {
     private boolean verified;
 
     public Physiotherapist(String userId, String name, String email, String address,
-                           String password, String gender, int phoneNumber, LocalDate dateOfBirth,
+                           String password, String gender, String phoneNumber, LocalDate dateOfBirth,
                            String licenseNo, String specialization, String qualification, String clinicName,
                            String bio, String availability, String languageSpoken, int yearsOfExperience,
                            float consultationFee, boolean verified) {
         super(userId, name, email, address, password, gender, phoneNumber, dateOfBirth, LocalDate.now(), true);
-        LicenseNo = licenseNo;
-        Specialization = specialization;
-        Qualification = qualification;
+        if (licenseNo == null || licenseNo.isBlank()) {
+            throw new IllegalArgumentException("License number cannot be empty");
+        }
+        LicenseNo = licenseNo.trim();
+        setSpecialization(specialization);
+        setQualification(qualification);
         ClinicName = clinicName;
         Bio = bio;
         this.availability = availability;
         LanguageSpoken = languageSpoken;
-        YearsOfExperience = yearsOfExperience;
-        ConsultationFee = consultationFee;
+        setYearsOfExperience(yearsOfExperience);
+        setConsultationFee(consultationFee);
         this.verified = verified;
     }
 
@@ -68,11 +71,17 @@ public class Physiotherapist extends User {
         return verified;
     }
     public void setSpecialization(String specialization) {
-        Specialization = specialization;
+        if (specialization == null || specialization.isBlank()) {
+            throw new IllegalArgumentException("Specialization cannot be empty");
+        }
+        Specialization = specialization.trim();
     }
 
     public void setQualification(String qualification) {
-        Qualification = qualification;
+        if (qualification == null || qualification.isBlank()) {
+            throw new IllegalArgumentException("Qualification cannot be empty");
+        }
+        Qualification = qualification.trim();
     }
 
     public void setClinicName(String clinicName) {
@@ -92,10 +101,16 @@ public class Physiotherapist extends User {
     }
 
     public void setYearsOfExperience(int yearsOfExperience) {
+        if (yearsOfExperience < 0) {
+            throw new IllegalArgumentException("Years of experience cannot be negative");
+        }
         YearsOfExperience = yearsOfExperience;
     }
 
     public void setConsultationFee(float consultationFee) {
+        if (consultationFee < 0) {
+            throw new IllegalArgumentException("Consultation fee cannot be negative");
+        }
         ConsultationFee = consultationFee;
     }
 
