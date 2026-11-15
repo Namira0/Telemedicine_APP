@@ -1,6 +1,6 @@
 package com.example.telemedicine_app;
 
-public class PatientController
+public class DoctorDashboardViewController
 {
     @javafx.fxml.FXML
     public void initialize() {
