@@ -73,18 +73,19 @@ public abstract class User implements Serializable {
     public void setActive(boolean active) {
         this.active = active;
     }
+
     @Override
     public String toString() {
-        return "User1{" +
-                "UserId='" + userId + '\'' +
+        return "User{" +
+                "userId='" + userId + '\'' +
                 ", name='" + name + '\'' +
                 ", gender='" + gender + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", registrationDate=" + registrationDate +
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
                 ", password='" + password + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
-                ", registrationDate=" + registrationDate +
                 ", active=" + active +
                 '}';
     }
