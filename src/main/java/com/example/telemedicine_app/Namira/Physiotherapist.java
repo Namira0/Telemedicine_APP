@@ -2,139 +2,105 @@ package com.example.telemedicine_app.Namira;
 
 import com.example.telemedicine_app.common.User;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Physiotherapist extends User {
-    private String LicenseNo,Specialization,Qualification,ClinicName,Bio,availability,LanguageSpoken;
-    private int YearsOfExperience;
-    private float ConsultationFee;
+public class Physiotherapist extends User implements Serializable {
+    private final String licenseNO;
+    private String specialization, qualification, clinicName, bio, languageSpoken;
+    private int yearsOfExperience;
+    private double consultationFee;
     private boolean verified;
 
     public Physiotherapist(String userId, String name, String email, String address,
                            String password, String gender, String phoneNumber, LocalDate dateOfBirth,
-                           String licenseNo, String specialization, String qualification, String clinicName,
-                           String bio, String availability, String languageSpoken, int yearsOfExperience,
-                           float consultationFee, boolean verified) {
-        super(userId, name, email, address, password, gender, phoneNumber, dateOfBirth, LocalDate.now(), true);
-        if (licenseNo == null || licenseNo.isBlank()) {
-            throw new IllegalArgumentException("License number cannot be empty");
-        }
-        LicenseNo = licenseNo.trim();
-        setSpecialization(specialization);
-        setQualification(qualification);
-        ClinicName = clinicName;
-        Bio = bio;
-        this.availability = availability;
-        LanguageSpoken = languageSpoken;
-        setYearsOfExperience(yearsOfExperience);
-        setConsultationFee(consultationFee);
+                           LocalDate registrationDate, boolean active, String licenseNO, String specialization,
+                           String qualification, String clinicName, String bio, String languageSpoken,
+                           int yearsOfExperience, double consultationFee, boolean verified) {
+        super(userId, name, email, address, password, gender, phoneNumber, dateOfBirth, registrationDate, active);
+        this.licenseNO = licenseNO;
+        this.specialization = specialization;
+        this.qualification = qualification;
+        this.clinicName = clinicName;
+        this.bio = bio;
+        this.languageSpoken = languageSpoken;
+        this.yearsOfExperience = yearsOfExperience;
+        this.consultationFee = consultationFee;
         this.verified = verified;
     }
-
-    public String getLicenseNo() {
-        return LicenseNo;
+    public String getLicenseNO() {
+        return licenseNO;
     }
-
     public String getSpecialization() {
-        return Specialization;
+        return specialization;
     }
-
     public String getQualification() {
-        return Qualification;
+        return qualification;
     }
-
     public String getClinicName() {
-        return ClinicName;
+        return clinicName;
     }
-
     public String getBio() {
-        return Bio;
+        return bio;
     }
-
-    public String getAvailability() {
-        return availability;
-    }
-
     public String getLanguageSpoken() {
-        return LanguageSpoken;
+        return languageSpoken;
     }
-
     public int getYearsOfExperience() {
-        return YearsOfExperience;
+        return yearsOfExperience;
     }
-
-    public float getConsultationFee() {
-        return ConsultationFee;
+    public double getConsultationFee() {
+        return consultationFee;
     }
-
     public boolean isVerified() {
         return verified;
     }
+
     public void setSpecialization(String specialization) {
-        if (specialization == null || specialization.isBlank()) {
-            throw new IllegalArgumentException("Specialization cannot be empty");
-        }
-        Specialization = specialization.trim();
+        this.specialization = specialization;
     }
-
     public void setQualification(String qualification) {
-        if (qualification == null || qualification.isBlank()) {
-            throw new IllegalArgumentException("Qualification cannot be empty");
-        }
-        Qualification = qualification.trim();
+        this.qualification = qualification;
     }
-
     public void setClinicName(String clinicName) {
-        ClinicName = clinicName;
+        this.clinicName = clinicName;
     }
-
     public void setBio(String bio) {
-        Bio = bio;
+        this.bio = bio;
     }
-
-    public void setAvailability(String availability) {
-        this.availability = availability;
-    }
-
     public void setLanguageSpoken(String languageSpoken) {
-        LanguageSpoken = languageSpoken;
+        this.languageSpoken = languageSpoken;
     }
-
     public void setYearsOfExperience(int yearsOfExperience) {
-        if (yearsOfExperience < 0) {
-            throw new IllegalArgumentException("Years of experience cannot be negative");
-        }
-        YearsOfExperience = yearsOfExperience;
+        this.yearsOfExperience = yearsOfExperience;
     }
-
-    public void setConsultationFee(float consultationFee) {
-        if (consultationFee < 0) {
-            throw new IllegalArgumentException("Consultation fee cannot be negative");
-        }
-        ConsultationFee = consultationFee;
+    public void setConsultationFee(double consultationFee) {
+        this.consultationFee = consultationFee;
     }
-
+    public void setVerified(boolean verified) {
+        this.verified = verified;
+    }
     @Override
     public String toString() {
         return "Physiotherapist{" +
-                "LicenseNo='" + LicenseNo + '\'' +
-                ", Specialization='" + Specialization + '\'' +
-                ", Qualification='" + Qualification + '\'' +
-                ", ClinicName='" + ClinicName + '\'' +
-                ", Bio='" + Bio + '\'' +
-                ", availability='" + availability + '\'' +
-                ", LanguageSpoken='" + LanguageSpoken + '\'' +
-                ", YearsOfExperience=" + YearsOfExperience +
-                ", ConsultationFee=" + ConsultationFee +
+                "licenseNO='" + licenseNO + '\'' +
+                ", specialization='" + specialization + '\'' +
+                ", qualification='" + qualification + '\'' +
+                ", clinicName='" + clinicName + '\'' +
+                ", bio='" + bio + '\'' +
+                ", languageSpoken='" + languageSpoken + '\'' +
+                ", yearsOfExperience=" + yearsOfExperience +
+                ", consultationFee=" + consultationFee +
                 ", verified=" + verified +
                 '}';
     }
+    // ---------- custom method ----------
+    public void verify() {
+        this.verified = true;
+    }
     @Override
     public void showDashboard() {
-        System.out.println("=== Physiotherapist dashboard ===");
-        System.out.println("Name: " + getName());
-        System.out.println("Specialization: " + Specialization);
-        System.out.println("Clinic: " + ClinicName);
-        System.out.println("Verified: " + verified);
+        // later: the controller loads PhysiotherapistDashboard.fxml
+        System.out.println("Physiotherapist dashboard of " + getName());
     }
 }

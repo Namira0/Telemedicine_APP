@@ -1,4 +1,89 @@
 package com.example.telemedicine_app.Namira;
 
-public class Exercise {
+import com.example.telemedicine_app.common.User;
+
+import java.io.Serializable;
+
+public class Exercise implements Serializable {
+    private final String exerciseId, planId;
+    private String name, instructions;
+    private int sets, repetitions;
+    private boolean completed;
+
+    public Exercise(String exerciseId, String planId, String name, String instructions, int sets, int repetitions) {
+        this.exerciseId = exerciseId;
+        this.planId = planId;
+        this.name = name;
+        this.instructions = instructions;
+        this.sets = sets;
+        this.repetitions = repetitions;
+    }
+
+    public String getExerciseId() {
+        return exerciseId;
+    }
+
+    public String getPlanId() {
+        return planId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getInstructions() {
+        return instructions;
+    }
+
+    public int getSets() {
+        return sets;
+    }
+
+    public int getRepetitions() {
+        return repetitions;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setInstructions(String instructions) {
+        this.instructions = instructions;
+    }
+
+    public void setSets(int sets) {
+        this.sets = sets;
+    }
+
+    public void setRepetitions(int repetitions) {
+        this.repetitions = repetitions;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
+    }
+
+    @Override
+    public String toString() {
+        return "Exercise{" +
+                "exerciseId='" + exerciseId + '\'' +
+                ", planId='" + planId + '\'' +
+                ", name='" + name + '\'' +
+                ", instructions='" + instructions + '\'' +
+                ", sets=" + sets +
+                ", repetitions=" + repetitions +
+                ", completed=" + completed +
+                '}';
+    }
+    public int getTotalReps(){
+        return sets * repetitions;
+    }
+    public void markCompleted(){
+        this.completed = true;
+    }
 }
+
