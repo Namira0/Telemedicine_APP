@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="711.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <ComboBox layoutX="442.0" layoutY="10.0" prefWidth="150.0" />
+      <Label layoutX="50.0" layoutY="14.0" text="LicenseNO" />
+      <TextField layoutX="87.0" layoutY="19.0" />
+      <DatePicker layoutX="75.0" layoutY="57.0" />
+      <TableView layoutX="102.0" layoutY="474.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <CheckBox layoutX="455.0" layoutY="48.0" mnemonicParsing="false" text="CheckBox" />
+      <Label layoutX="60.0" layoutY="24.0" text="LicenseNO" />
+      <Label layoutX="70.0" layoutY="34.0" text="LicenseNO" />
+      <Label layoutX="80.0" layoutY="44.0" text="LicenseNO" />
+      <Label layoutX="90.0" layoutY="54.0" text="LicenseNO" />
+      <Label layoutX="100.0" layoutY="64.0" text="LicenseNO" />
+      <Label layoutX="110.0" layoutY="74.0" text="LicenseNO" />
+      <Label layoutX="120.0" layoutY="84.0" text="LicenseNO" />
+      <Label layoutX="130.0" layoutY="94.0" text="LicenseNO" />
+      <Label layoutX="140.0" layoutY="104.0" text="LicenseNO" />
+      <Label layoutX="150.0" layoutY="114.0" text="LicenseNO" />
+      <Label layoutX="160.0" layoutY="124.0" text="LicenseNO" />
+      <Label layoutX="638.0" layoutY="15.0" text="Specialization" />
+      <TextField layoutX="720.0" layoutY="11.0" />
+   </children>
+</AnchorPane>
