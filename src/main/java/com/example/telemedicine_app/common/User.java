@@ -15,8 +15,8 @@ public abstract class User implements Serializable {
     private String phoneNumber;
     private boolean active;
     public User(String userId, String name, String email, String address, String password,
-                 String gender, String phoneNumber, LocalDate dateOfBirth,
-                 LocalDate registrationDate, boolean active) {
+                String gender, String phoneNumber, LocalDate dateOfBirth,
+                LocalDate registrationDate, boolean active) {
         this.userId = userId;
         this.name = name;
         this.email = email;
