@@ -3,7 +3,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -15,8 +14,7 @@
    <children>
       <ComboBox fx:id="excerciseNameComboBox" layoutX="316.0" layoutY="11.0" prefWidth="150.0" />
       <TextField fx:id="planIdTextField" layoutX="75.0" layoutY="11.0" />
-      <DatePicker layoutX="616.0" layoutY="52.0" />
-      <TableView fx:id="exerciseTableView" layoutX="102.0" layoutY="474.0" prefHeight="200.0" prefWidth="762.0">
+      <TableView fx:id="exerciseTableView" layoutX="104.0" layoutY="431.0" prefHeight="200.0" prefWidth="632.0">
         <columns>
           <TableColumn fx:id="planIdTableColumn" prefWidth="106.0000228881836" text="Plan Id" />
           <TableColumn fx:id="exercisenameTableColumn" prefWidth="120.39996337890625" text="Exercise Name" />
@@ -35,10 +33,10 @@
       <Label layoutX="243.0" layoutY="48.0" text="Repetitions" />
       <Label layoutX="46.0" layoutY="48.0" text="Sets" />
       <CheckBox layoutX="75.0" layoutY="119.0" mnemonicParsing="false" text="Completed" />
-      <Button layoutX="208.0" layoutY="152.0" mnemonicParsing="false" onAction="#addExerciseButtonOA" text="Add Exercise" />
-      <Button layoutX="339.0" layoutY="152.0" mnemonicParsing="false" onAction="#markCompletedbuttonOA" text="Mark Completed" />
-      <Button layoutX="471.0" layoutY="152.0" mnemonicParsing="false" onAction="#backbuttonOA" text="Back" />
-      <TextArea fx:id="instructionsTextArea" layoutX="316.0" layoutY="79.0" prefHeight="0.0" prefWidth="230.0" />
+      <Button layoutX="261.0" layoutY="185.0" mnemonicParsing="false" onAction="#addExerciseButtonOA" text="Add Exercise" />
+      <Button layoutX="442.0" layoutY="185.0" mnemonicParsing="false" onAction="#markCompletedbuttonOA" text="Mark Completed" />
+      <Button layoutX="70.0" layoutY="185.0" mnemonicParsing="false" onAction="#backbuttonOA" text="Back" />
+      <TextArea fx:id="instructionsTextArea" layoutX="316.0" layoutY="79.0" prefHeight="66.0" prefWidth="308.0" />
       <ComboBox fx:id="repetitionsComboBox" layoutX="316.0" layoutY="44.0" prefWidth="150.0" />
       <ComboBox fx:id="setsComboBox" layoutX="75.0" layoutY="44.0" prefWidth="150.0" />
       <Label layoutX="14.0" layoutY="84.0" text="Exercise Id" />
