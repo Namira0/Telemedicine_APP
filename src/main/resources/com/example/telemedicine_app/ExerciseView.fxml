@@ -1,40 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="711.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="711.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.telemedicine_app.Namira.ExerciseController">
    <children>
-      <ComboBox layoutX="442.0" layoutY="10.0" prefWidth="150.0" />
-      <Label layoutX="50.0" layoutY="14.0" text="LicenseNO" />
-      <TextField layoutX="87.0" layoutY="19.0" />
-      <DatePicker layoutX="75.0" layoutY="57.0" />
-      <TableView layoutX="102.0" layoutY="474.0" prefHeight="200.0" prefWidth="200.0">
+      <ComboBox fx:id="excerciseNameComboBox" layoutX="316.0" layoutY="11.0" prefWidth="150.0" />
+      <TextField fx:id="planIdTextField" layoutX="75.0" layoutY="11.0" />
+      <DatePicker layoutX="616.0" layoutY="52.0" />
+      <TableView fx:id="exerciseTableView" layoutX="102.0" layoutY="474.0" prefHeight="200.0" prefWidth="762.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="planIdTableColumn" prefWidth="106.0000228881836" text="Plan Id" />
+          <TableColumn fx:id="exercisenameTableColumn" prefWidth="120.39996337890625" text="Exercise Name" />
+            <TableColumn minWidth="0.0" prefWidth="0.0" text="C1" />
+            <TableColumn fx:id="setsTableColumn" prefWidth="128.0" text="Sets" />
+            <TableColumn fx:id="repetitionsTableColumn" minWidth="8.0" prefWidth="78.00003051757812" text="Repetitions" />
+            <TableColumn fx:id="completedTableColumn" prefWidth="99.20001220703125" text="Completed" />
+            <TableColumn fx:id="exerciseIdTableColumn" prefWidth="106.0000228881836" text="Exercise ID" />
         </columns>
       </TableView>
-      <CheckBox layoutX="455.0" layoutY="48.0" mnemonicParsing="false" text="CheckBox" />
-      <Label layoutX="60.0" layoutY="24.0" text="LicenseNO" />
-      <Label layoutX="70.0" layoutY="34.0" text="LicenseNO" />
-      <Label layoutX="80.0" layoutY="44.0" text="LicenseNO" />
-      <Label layoutX="90.0" layoutY="54.0" text="LicenseNO" />
-      <Label layoutX="100.0" layoutY="64.0" text="LicenseNO" />
-      <Label layoutX="110.0" layoutY="74.0" text="LicenseNO" />
-      <Label layoutX="120.0" layoutY="84.0" text="LicenseNO" />
-      <Label layoutX="130.0" layoutY="94.0" text="LicenseNO" />
-      <Label layoutX="140.0" layoutY="104.0" text="LicenseNO" />
-      <Label layoutX="150.0" layoutY="114.0" text="LicenseNO" />
-      <Label layoutX="160.0" layoutY="124.0" text="LicenseNO" />
-      <Label layoutX="638.0" layoutY="15.0" text="Specialization" />
-      <TextField layoutX="720.0" layoutY="11.0" />
+      <Label layoutX="413.0" layoutY="198.0" />
+      <Label layoutX="28.0" layoutY="15.0" text="Plan Id" />
+      <Label layoutX="234.0" layoutY="15.0" text="Exercise Name" />
+      <Label layoutX="247.0" layoutY="93.0" text="Instructions" />
+      <TextField fx:id="excersiseIdTextField" layoutX="75.0" layoutY="77.0" />
+      <Label layoutX="243.0" layoutY="48.0" text="Repetitions" />
+      <Label layoutX="46.0" layoutY="48.0" text="Sets" />
+      <CheckBox layoutX="75.0" layoutY="119.0" mnemonicParsing="false" text="Completed" />
+      <Button layoutX="208.0" layoutY="152.0" mnemonicParsing="false" onAction="#addExerciseButtonOA" text="Add Exercise" />
+      <Button layoutX="339.0" layoutY="152.0" mnemonicParsing="false" onAction="#markCompletedbuttonOA" text="Mark Completed" />
+      <Button layoutX="471.0" layoutY="152.0" mnemonicParsing="false" onAction="#backbuttonOA" text="Back" />
+      <TextArea fx:id="instructionsTextArea" layoutX="316.0" layoutY="79.0" prefHeight="0.0" prefWidth="230.0" />
+      <ComboBox fx:id="repetitionsComboBox" layoutX="316.0" layoutY="44.0" prefWidth="150.0" />
+      <ComboBox fx:id="setsComboBox" layoutX="75.0" layoutY="44.0" prefWidth="150.0" />
+      <Label layoutX="14.0" layoutY="84.0" text="Exercise Id" />
    </children>
 </AnchorPane>

@@ -1,19 +1,17 @@
 package com.example.telemedicine_app.Namira;
 
-import com.example.telemedicine_app.common.User;
-
 import java.io.Serializable;
 
 public class Exercise implements Serializable {
     private final String exerciseId, planId;
-    private String name, instructions;
+    private String exerciseName, instructions;
     private int sets, repetitions;
     private boolean completed;
 
     public Exercise(String exerciseId, String planId, String name, String instructions, int sets, int repetitions) {
         this.exerciseId = exerciseId;
         this.planId = planId;
-        this.name = name;
+        this.exerciseName = name;
         this.instructions = instructions;
         this.sets = sets;
         this.repetitions = repetitions;
@@ -27,8 +25,8 @@ public class Exercise implements Serializable {
         return planId;
     }
 
-    public String getName() {
-        return name;
+    public String getExerciseName() {
+        return exerciseName;
     }
 
     public String getInstructions() {
@@ -47,8 +45,8 @@ public class Exercise implements Serializable {
         return completed;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setExerciseName(String exerciseName) {
+        this.exerciseName = exerciseName;
     }
 
     public void setInstructions(String instructions) {
@@ -72,7 +70,7 @@ public class Exercise implements Serializable {
         return "Exercise{" +
                 "exerciseId='" + exerciseId + '\'' +
                 ", planId='" + planId + '\'' +
-                ", name='" + name + '\'' +
+                ", name='" + exerciseName + '\'' +
                 ", instructions='" + instructions + '\'' +
                 ", sets=" + sets +
                 ", repetitions=" + repetitions +

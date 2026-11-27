@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -24,6 +23,5 @@
       <TextField layoutX="389.0" layoutY="24.0" />
       <TextField layoutX="389.0" layoutY="53.0" />
       <Label layoutX="291.0" layoutY="57.0" text="Consultation Fee" />
-      <CheckBox layoutX="391.0" layoutY="90.0" mnemonicParsing="false" text="Verified" />
    </children>
 </AnchorPane>
