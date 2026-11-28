@@ -1,4 +1,4 @@
-gitpackage com.example.telemedicine_app;
+package com.example.telemedicine_app;
 
 import javafx.application.Application;
 
