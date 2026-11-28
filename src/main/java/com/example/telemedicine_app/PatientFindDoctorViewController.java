@@ -66,13 +66,11 @@ public class PatientFindDoctorViewController
 
     @javafx.fxml.FXML
     public void patientDashboardButtonOA(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(
-                getClass().getResource("PatientDashboardView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PatientDashboardView.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load());
 
-        Stage stage = (Stage) ((Node) actionEvent.getSource())
-                .getScene().getWindow();
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
         stage.setScene(scene);
         stage.show();

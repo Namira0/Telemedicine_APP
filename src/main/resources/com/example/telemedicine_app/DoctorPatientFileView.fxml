@@ -35,7 +35,9 @@
       <ComboBox fx:id="patientCB" layoutX="79.0" layoutY="89.0" prefWidth="150.0" />
       <Button layoutX="276.0" layoutY="171.0" mnemonicParsing="false" onAction="#LoadFilesOA" text="Load Files" />
       <Button layoutX="53.0" layoutY="184.0" mnemonicParsing="false" onAction="#openOA" text="Open" />
-      <Button layoutX="204.0" layoutY="432.0" mnemonicParsing="false" onAction="#DownloadOA" text="Download" />
+      <Button layoutX="205.0" layoutY="445.0" mnemonicParsing="false" onAction="#DownloadOA" text="Download" />
       <Button layoutX="413.0" layoutY="445.0" mnemonicParsing="false" onAction="#sendFileOA" text="Send File" />
+      <Button layoutX="589.0" layoutY="445.0" mnemonicParsing="false" onAction="#nextOA" text="Patient Records" />
+      <Button layoutX="31.0" layoutY="445.0" mnemonicParsing="false" onAction="#backOA" text="Appointments" />
    </children>
 </AnchorPane>

@@ -49,13 +49,11 @@ public class PatientBookingViewController
 
     @javafx.fxml.FXML
     public void bookButtonOA(ActionEvent actionEvent) throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader(
-                getClass().getResource("PatientAppointmentsView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PatientAppointmentsView.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load());
 
-        Stage stage = (Stage) ((Node) actionEvent.getSource())
-                .getScene().getWindow();
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
         stage.setScene(scene);
         stage.show();
@@ -65,13 +63,11 @@ public class PatientBookingViewController
 
     @javafx.fxml.FXML
     public void backButtonOA(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(
-                getClass().getResource("PatientFindDoctorView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PatientFindDoctorView.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load());
 
-        Stage stage = (Stage) ((Node) actionEvent.getSource())
-                .getScene().getWindow();
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
         stage.setScene(scene);
         stage.show();

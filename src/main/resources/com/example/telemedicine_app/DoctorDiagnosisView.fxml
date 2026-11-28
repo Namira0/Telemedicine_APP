@@ -36,7 +36,7 @@
             <TableColumn fx:id="dateTC" prefWidth="76.7999267578125" text=" date" />
         </columns>
       </TableView>
-      <Button layoutX="494.0" layoutY="396.0" mnemonicParsing="false" onAction="#saveButtonOA" text="Save" />
-      <Button layoutX="36.0" layoutY="409.0" mnemonicParsing="false" onAction="#backButtonOA" text="Back" />
+      <Button layoutX="494.0" layoutY="396.0" mnemonicParsing="false" onAction="#nextButtonOA" text="Prescription" />
+      <Button layoutX="36.0" layoutY="409.0" mnemonicParsing="false" onAction="#backButtonOA" text="Consultation" />
    </children>
 </AnchorPane>

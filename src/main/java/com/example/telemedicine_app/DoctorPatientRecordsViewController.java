@@ -48,4 +48,8 @@ public class DoctorPatientRecordsViewController
     public void backButtonOA(ActionEvent actionEvent) {
 
     }
+
+    @javafx.fxml.FXML
+    public void nextButtonOA(ActionEvent actionEvent) {
+    }
 }

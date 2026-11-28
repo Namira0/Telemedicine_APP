@@ -82,4 +82,12 @@ public class DoctorPatientFileViewController
     @javafx.fxml.FXML
     public void openOA(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void nextOA(ActionEvent actionEvent) {
+    }
 }

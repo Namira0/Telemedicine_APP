@@ -52,11 +52,15 @@ public class DoctorConsultationViewController
         endTC.setCellValueFactory(new PropertyValueFactory<>("endTime"));
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void saveOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void backOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void nextOA(ActionEvent actionEvent) {
     }
 }

@@ -1,6 +1,7 @@
 package com.example.telemedicine_app;
 
 import com.example.telemedicine_app.nawrin.MedicalDocument;
+import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
@@ -42,5 +43,13 @@ public class PatientDocumentsViewController
         categoryTC.setCellValueFactory(new PropertyValueFactory<>("category"));
         fileTC.setCellValueFactory(new PropertyValueFactory<>("fileName"));
         dateTC.setCellValueFactory(new PropertyValueFactory<>("documentDate"));
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void nextButtonOA(ActionEvent actionEvent) {
     }
 }

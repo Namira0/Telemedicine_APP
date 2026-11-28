@@ -41,7 +41,9 @@ public class PatientAppointmentsViewController
     public void backButtonOA(ActionEvent actionEvent) {
     }
 
+
     @javafx.fxml.FXML
-    public void cancelButtonOA(ActionEvent actionEvent) {
+    public void nextButtonOA(ActionEvent actionEvent) {
+
     }
 }

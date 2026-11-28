@@ -28,8 +28,8 @@
             <TableColumn fx:id="chatLogTC" prefWidth="112.800048828125" text="ChatLog" />
         </columns>
       </TableView>
-      <Button layoutX="484.0" layoutY="378.0" mnemonicParsing="false" onAction="#loadButtonOA" text="Load" />
-      <Button layoutX="10.0" layoutY="391.0" mnemonicParsing="false" onAction="#backButtonOA" text="Back" />
-      <Button layoutX="251.0" layoutY="391.0" mnemonicParsing="false" onAction="#reviewButtonOA" text="Review" />
+      <Button layoutX="487.0" layoutY="391.0" mnemonicParsing="false" onAction="#loadButtonOA" text="Load" />
+      <Button layoutX="18.0" layoutY="391.0" mnemonicParsing="false" onAction="#backButtonOA" text="Appointments" />
+      <Button layoutX="261.0" layoutY="391.0" mnemonicParsing="false" onAction="#reviewButtonOA" text="Review" />
    </children>
 </AnchorPane>

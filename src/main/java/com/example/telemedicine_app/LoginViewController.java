@@ -2,9 +2,13 @@ package com.example.telemedicine_app;
 
 import com.example.telemedicine_app.nawrin.User;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
@@ -17,7 +21,6 @@ public class LoginViewController
     @javafx.fxml.FXML
     private ComboBox<String> loginCB;
 
-    ArrayList<User> UserList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -38,22 +41,34 @@ public class LoginViewController
             alert.showAndWait();
             return;
         }
+        String dashboard = "";
 
-        if (!email.contains("@") || !email.contains(".")) {
-            alert.setContentText("Enter a valid email address");
-            alert.showAndWait();
-            return;
+        if (role.equals("Patient")) {
+            dashboard = "PatientDashboardView.fxml";
         }
-        if (password.length() < 6) {
-            alert.setContentText("Password must be at least 6 characters");
-            alert.showAndWait();
-            return;
+        else if (role.equals("Doctor")) {
+            dashboard = "DoctorDashboardView.fxml";
         }
-        alert.setAlertType(Alert.AlertType.INFORMATION);
-        alert.setContentText("Login validation successful");
-        alert.showAndWait();
-    }
+        else if (role.equals("Admin")) {
+            dashboard = "AdminDashboardView.fxml";
+        }
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(
+                    getClass().getResource(dashboard)
+            );
+
+            Scene scene = new Scene(fxmlLoader.load());
+
+            Stage stage = (Stage) ((Node) actionEvent.getSource())
+                    .getScene().getWindow();
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
-}
+}}
 

@@ -7,12 +7,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="568.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.telemedicine_app.PatientAppointmentsViewController">
    <children>
       <TextField fx:id="patientIdTF" layoutX="107.0" layoutY="48.0" />
       <Label layoutX="31.0" layoutY="52.0" text="patientId" />
-      <Button layoutX="459.0" layoutY="402.0" mnemonicParsing="false" onAction="#loadButtonOA" prefHeight="38.0" prefWidth="72.0" text="Load" />
+      <Button layoutX="31.0" layoutY="118.0" mnemonicParsing="false" onAction="#loadButtonOA" prefHeight="38.0" prefWidth="72.0" text="Load" />
       <TextField fx:id="appointmentIdTF" layoutX="436.0" layoutY="48.0" />
       <Label layoutX="346.0" layoutY="52.0" text="appointmentId" />
       <TableView fx:id="appointmentTV" layoutX="6.0" layoutY="178.0" prefHeight="200.0" prefWidth="587.0">
@@ -25,7 +24,7 @@
             <TableColumn fx:id="reasonTC" prefWidth="113.60003662109375" text="Reason" />
         </columns>
       </TableView>
-      <Button layoutX="264.0" layoutY="412.0" mnemonicParsing="false" onAction="#cancelButtonOA" prefHeight="38.0" prefWidth="72.0" text="Cancel" />
-      <Button layoutX="31.0" layoutY="412.0" mnemonicParsing="false" onAction="#backButtonOA" prefHeight="38.0" prefWidth="72.0" text="Back" />
+      <Button layoutX="467.0" layoutY="412.0" mnemonicParsing="false" onAction="#nextButtonOA" prefHeight="38.0" prefWidth="87.0" text="Consultation" />
+      <Button layoutX="31.0" layoutY="412.0" mnemonicParsing="false" onAction="#backButtonOA" prefHeight="38.0" prefWidth="87.0" text="Dashboard" />
    </children>
 </AnchorPane>

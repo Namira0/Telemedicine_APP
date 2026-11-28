@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="457.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.telemedicine_app.DoctorConsultationViewController">
    <children>
       <TextField fx:id="patientIdTF" layoutX="80.0" layoutY="35.0" />
@@ -34,7 +33,7 @@
             <TableColumn fx:id="endTC" prefWidth="118.39998168945317" text="End" />
         </columns>
       </TableView>
-      <Button layoutX="14.0" layoutY="418.0" mnemonicParsing="false" onAction="#backOA" text="Back" />
-      <Button layoutX="471.0" layoutY="418.0" mnemonicParsing="false" onAction="#saveOA" text="Save" />
+      <Button layoutX="14.0" layoutY="418.0" mnemonicParsing="false" onAction="#backOA" text="Appointments" />
+      <Button layoutX="471.0" layoutY="418.0" mnemonicParsing="false" onAction="#nextOA" text="Diagnosis" />
    </children>
 </AnchorPane>
