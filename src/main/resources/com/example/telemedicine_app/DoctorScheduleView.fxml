@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="499.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.telemedicine_app.DoctorScheduleViewController">
+   <children>
+      <TextField fx:id="docIdTF" layoutX="107.0" layoutY="41.0" />
+      <Label layoutX="34.0" layoutY="45.0" text="Doctor Id:" />
+      <TextField fx:id="maxPatientTF" layoutX="427.0" layoutY="46.0" />
+      <TextField fx:id="endTF" layoutX="91.0" layoutY="167.0" />
+      <TextField fx:id="startTF" layoutX="91.0" layoutY="128.0" />
+      <Label layoutX="34.0" layoutY="86.0" text="Day" />
+      <Label layoutX="16.0" layoutY="132.0" text="Start Time:" />
+      <Label layoutX="18.0" layoutY="171.0" text="End Time:" />
+      <Label layoutX="331.0" layoutY="50.0" prefHeight="18.0" prefWidth="73.0" text="Max Patient" />
+      <TableView fx:id="scheduleTV" layoutX="12.0" layoutY="223.0" prefHeight="200.0" prefWidth="576.0">
+        <columns>
+          <TableColumn fx:id="docIdTC" maxWidth="1119.9996662139893" minWidth="30.0" prefWidth="111.99996662139893" text="Doctor Id" />
+          <TableColumn fx:id="startTC" maxWidth="1088.0001831054688" minWidth="30.0" prefWidth="108.80001831054688" text="Start Time" />
+            <TableColumn fx:id="endTC" maxWidth="1151.9996643066406" minWidth="30.0" prefWidth="115.19996643066406" text="End Time" />
+            <TableColumn fx:id="maxPatientTC" maxWidth="1216.0003662109375" minWidth="30.0" prefWidth="121.60003662109375" text="Max Patient" />
+            <TableColumn fx:id="dayTC" maxWidth="1240.0" minWidth="30.0" prefWidth="124.0" text="Day" />
+        </columns>
+      </TableView>
+      <Button layoutX="19.0" layoutY="437.0" mnemonicParsing="false" onAction="#backButtonOA" text="Back" />
+      <Button layoutX="490.0" layoutY="450.0" mnemonicParsing="false" onAction="#saveButtonOA" text="Save" />
+      <ComboBox fx:id="dayCB" layoutX="91.0" layoutY="82.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

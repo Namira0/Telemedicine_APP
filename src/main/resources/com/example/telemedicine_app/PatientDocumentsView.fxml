@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.telemedicine_app.PatientDocumentsViewController">
+   <children>
+      <TextField fx:id="documentIdTC" layoutX="106.0" layoutY="58.0" />
+      <TextField fx:id="patientIdTC" layoutX="73.0" layoutY="98.0" />
+      <TextField fx:id="titleTF" layoutX="427.0" layoutY="85.0" />
+      <TextField fx:id="fileNameTC" layoutX="419.0" layoutY="45.0" />
+      <DatePicker fx:id="documentDP" layoutX="407.0" layoutY="124.0" />
+      <ComboBox fx:id="categoryCB" layoutX="73.0" layoutY="137.0" prefWidth="150.0" />
+      <Label layoutX="24.0" layoutY="62.0" text="Document Id" />
+      <Label layoutX="12.0" layoutY="102.0" text="patient Id" />
+      <Label layoutX="14.0" layoutY="141.0" text="category" />
+      <Label layoutX="353.0" layoutY="53.0" text="fileName" />
+      <Label layoutX="364.0" layoutY="93.0" text="title" />
+      <Label layoutX="323.0" layoutY="128.0" text="document" />
+      <TableView fx:id="documentTV" layoutX="65.0" layoutY="200.0" prefHeight="175.0" prefWidth="407.0">
+        <columns>
+          <TableColumn fx:id="idTC" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="titleTC" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="categoryTC" prefWidth="96.79998779296875" text="Category" />
+            <TableColumn fx:id="fileTC" prefWidth="67.20001220703125" text="File" />
+            <TableColumn fx:id="dateTC" prefWidth="92.800048828125" text="Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

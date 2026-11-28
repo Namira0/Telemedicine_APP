@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="529.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.telemedicine_app.DoctorPatientFileViewController">
+   <children>
+      <TextField fx:id="doctorIdTF" layoutX="100.0" layoutY="44.0" />
+      <Label layoutX="25.0" layoutY="48.0" text="Doctor ID:" />
+      <Label layoutX="32.0" layoutY="93.0" text="Patient" />
+      <TableView fx:id="sharedTV" layoutX="31.0" layoutY="243.0" prefHeight="172.0" prefWidth="626.0">
+        <columns>
+          <TableColumn fx:id="idTC" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="titleTC" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="categoryTC" prefWidth="75.0" text="Category" />
+            <TableColumn fx:id="fileTC" prefWidth="75.0" text="File Name" />
+            <TableColumn fx:id="typeTC" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="sizeTC" prefWidth="75.0" text="Size" />
+            <TableColumn fx:id="docDateTC" prefWidth="75.0" text="Doc Date" />
+            <TableColumn fx:id="updateDateTC" prefWidth="99.19998779296873" text="Update Date" />
+        </columns>
+      </TableView>
+      <TextField fx:id="documentIdTF" layoutX="456.0" layoutY="44.0" />
+      <TextField fx:id="titleTF" layoutX="456.0" layoutY="80.0" />
+      <ComboBox fx:id="categoryCB" layoutX="439.0" layoutY="115.0" prefWidth="150.0" />
+      <Label fx:id="selectFileLabel" layoutX="84.0" layoutY="14.0" prefHeight="18.0" prefWidth="139.0" text="Select File" />
+      <Label layoutX="360.0" layoutY="57.0" text="document Id" />
+      <Label layoutX="360.0" layoutY="84.0" text="Title:" />
+      <Label layoutX="373.0" layoutY="119.0" text="Category:" />
+      <ComboBox fx:id="patientCB" layoutX="79.0" layoutY="89.0" prefWidth="150.0" />
+      <Button layoutX="276.0" layoutY="171.0" mnemonicParsing="false" onAction="#LoadFilesOA" text="Load Files" />
+      <Button layoutX="53.0" layoutY="184.0" mnemonicParsing="false" onAction="#openOA" text="Open" />
+      <Button layoutX="204.0" layoutY="432.0" mnemonicParsing="false" onAction="#DownloadOA" text="Download" />
+      <Button layoutX="413.0" layoutY="445.0" mnemonicParsing="false" onAction="#sendFileOA" text="Send File" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.telemedicine_app.PatientRegistrationViewController">
+   <children>
+      <TextField fx:id="UserIdTF" layoutX="116.0" layoutY="43.0" />
+      <TextField fx:id="EmailTF" layoutX="116.0" layoutY="83.0" />
+      <TextField fx:id="PhoneNumberTF" layoutX="434.0" layoutY="83.0" />
+      <TextField fx:id="FullNameTF" layoutX="429.0" layoutY="43.0" />
+      <DatePicker fx:id="dobDP" layoutX="104.0" layoutY="123.0" />
+      <Label layoutX="365.0" layoutY="127.0" text="Gender" />
+      <Label layoutX="29.0" layoutY="47.0" text="User Id" />
+      <Label layoutX="29.0" layoutY="87.0" text="Email" />
+      <Label layoutX="338.0" layoutY="47.0" text="Full Name" />
+      <Label layoutX="351.0" layoutY="87.0" text="Phone Number" />
+      <Label layoutX="17.0" layoutY="127.0" text="Date Of Birth" />
+      <ComboBox fx:id="genderCB" layoutX="421.0" layoutY="123.0" prefWidth="150.0" />
+      <Button layoutX="527.0" layoutY="200.0" mnemonicParsing="false" onAction="#RegisterOA" text="Register" />
+   </children>
+</AnchorPane>
